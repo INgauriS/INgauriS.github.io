@@ -234,31 +234,91 @@
 							</span></h2>
 						</header>
 						
-						<div class="w3-content w3-section" style="max-width:500px">
 
-							<a href="https://twitter.com/Sissaschool/status/1470354173376049156" class="image fit"><img class="mySlides w3-animate-fading" src="images/News_Feed/IM1.png" style="width:100%"> </a>
-							<a href="https://www.facebook.com/333889359989979/photos/a.432105343501713/4778704135508457/" class="image fit"><img class="mySlides w3-animate-fading" src="images/News_Feed/IM2.JPG" style="width:100%"></a>
-							<a href="https://www.facebook.com/ictp.page/photos/pob.100002439565071/2692190814133870" class="image fit"><img class="mySlides w3-animate-fading" src="images/News_Feed/IM4.jpg" style="width:100%"></a>
-
-						
-						</div>
-						
-						<script>
-						var myIndex = 0;
-						carousel();
-						
-						function carousel() {
-							var i;
-							var x = document.getElementsByClassName("mySlides");
-							for (i = 0; i < x.length; i++) {
-							x[i].style.display = "none";  
-							}
-							myIndex++;
-							if (myIndex > x.length) {myIndex = 1}    
-							x[myIndex-1].style.display = "block";  
-							setTimeout(carousel, 4000);    
-						}
-						</script>	
+                        <div class="container">
+                          <div class="mySlides">
+                            <div class="numbertext;">Won SARAO Postdoctoral Fellowship</div>
+                            <center></center>
+                            <a href="https://twitter.com/Sissaschool/status/1470354173376049156/photo/1">
+                            <img src="images/News_Feed/IM1.png" style="width:auto; height: 300px;">
+                            </a>
+                            </center>
+                          </div>
+                        
+                          <div class="mySlides">
+                            <div class="numbertext">Press Release of "Evolving Dark Matter Cores" <a href="https://www.sissa.it/sites/default/files/SISSA%20DARK%20MATTER%20press%20release.pdf">(Pdf)</a> </div>
+                            <center>
+                            <a href="https://www.sissa.it/news/distant-galaxies-and-true-nature-dark-matter-new-sissa-study">
+                            <img src="images/News_Feed/Paper3_PR.png" style="width:auto; height: 300px;">
+                            </a>
+                        </center>
+                           
+                          </div>
+                        
+                          <div class="mySlides">
+                            <div class="numbertext">Cosmology 2018 (LOC member)</div>
+                            <center>
+                            <a href="https://indico.cern.ch/event/736594/">
+                            <img src="images/News_Feed/IM2.JPG" style="width:auto; height: 300px">
+                            </a>
+                            </center>
+                          </div>
+                            
+                          <a class="prev" onclick="plusSlides(-1)">❮</a>
+                          <a class="next" onclick="plusSlides(1)">❯</a>
+                        
+                          <div class="caption-container">
+                            <p id="caption"></p>
+                          </div>
+                    
+                        
+                        <script>
+                        var slideIndex = 1;
+                        showSlides(slideIndex);
+                        
+                        function plusSlides(n) {
+                          showSlides(slideIndex += n);
+                        }
+                        
+                        function currentSlide(n) {
+                          showSlides(slideIndex = n);
+                        }
+                        
+                        function showSlides(n) {
+                          var i;
+                          var slides = document.getElementsByClassName("mySlides");
+                          var dots = document.getElementsByClassName("demo");
+                          var captionText = document.getElementById("caption");
+                          if (n > slides.length) {slideIndex = 1}
+                          if (n < 1) {slideIndex = slides.length}
+                          for (i = 0; i < slides.length; i++) {
+                              slides[i].style.display = "none";
+                          }
+                          for (i = 0; i < dots.length; i++) {
+                              dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex-1].style.display = "block";
+                          dots[slideIndex-1].className += " active";
+                          captionText.innerHTML = dots[slideIndex-1].alt;
+                        }
+                        </script>
+                        
+                        <script>
+                            var myIndex = 0;
+                            carousel();
+                            
+                            function carousel() {
+                                var i;
+                                var x = document.getElementsByClassName("mySlides");
+                                for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                                }
+                                myIndex++;
+                                if (myIndex > x.length) {myIndex = 1}    
+                                x[myIndex-1].style.display = "block";  
+                                setTimeout(carousel, 4000);    
+                            }
+                        </script>	
 						
 					</div>  
 					  
